@@ -1,0 +1,56 @@
+body {
+  align-items: center;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+}
+
+.game-screen {
+  background-color: white;
+  height: 1000px;
+  width: 1000px;
+}
+.game-screen header {
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 37px;
+  background-color: burlywood;
+}
+.game-screen header .btn-back {
+  height: fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  align-self: center;
+}
+.game-screen header .level-title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: fit-content;
+}
+.game-screen header .level-title span {
+  font-size: 35px;
+  align-self: center;
+}
+.game-screen header .level-title h1 {
+  align-self: center;
+}
+.game-screen .game-info {
+  width: 100%;
+  height: 100px;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+.game-screen .game-content {
+  width: 90%;
+  height: 500px;
+  background-color: blue;
+  display: block;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=gameScreen.css.map */
