@@ -1,28 +1,36 @@
-body {
+html, body {
   align-items: center;
   background-color: green;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .game-screen {
-  background-color: white;
-  height: 1000px;
-  width: 1000px;
+  background-color: #f5fbff;
+  height: fit-content;
+  width: 120vh;
+  border-radius: 5px;
 }
 .game-screen header {
-  color: red;
+  color: #12377b;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 37px;
-  background-color: burlywood;
+  background-color: #f5fbff;
 }
 .game-screen header .btn-back {
   height: fit-content;
   width: fit-content;
   padding: 5px 10px;
   align-self: center;
+  margin-left: 5px;
+  border-radius: 2px;
+  background-color: #129af2;
+  color: white;
 }
 .game-screen header .level-title {
   display: flex;
@@ -37,20 +45,82 @@ body {
 .game-screen header .level-title h1 {
   align-self: center;
 }
+.game-screen header .header-actions {
+  display: block;
+  margin: auto 0;
+  margin-right: 5px;
+}
+.game-screen header .header-actions button {
+  background-color: #129af2;
+  color: white;
+  border-radius: 2px;
+  padding: 5px 10px;
+}
 .game-screen .game-info {
-  width: 100%;
-  height: 100px;
-  background-color: yellow;
+  width: 98%;
+  height: 75px;
+  background-color: #f5fbff;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 100px;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(20, 70, 120, 0.25);
+  align-self: center;
+  margin: 4px auto;
+  border-radius: 10px;
+}
+.game-screen .game-info div {
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  align-content: center;
+}
+.game-screen .game-info div p {
+  margin: 0;
 }
 .game-screen .game-content {
-  width: 90%;
+  width: 95%;
   height: 500px;
   background-color: blue;
   display: block;
   margin: 0 auto;
+}
+.game-screen .game-progress {
+  width: 98%;
+  height: fit-content;
+  text-align: center;
+  align-content: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin: 3px auto;
+  background-color: #f5fbff;
+  box-shadow: 0 8px 16px rgba(20, 70, 120, 0.25);
+}
+.game-screen .game-progress .progress-track {
+  width: 85%;
+  height: 30px;
+  margin: 0;
+}
+.game-screen .footer-game {
+  width: 100%;
+  height: fit-content;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.game-screen .footer-game .container-support {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.game-screen .footer-game .container-support .btn-support {
+  width: 50px;
+  height: 50px;
 }
 
 /*# sourceMappingURL=gameScreen.css.map */

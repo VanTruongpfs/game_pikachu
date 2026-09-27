@@ -1,26 +1,38 @@
-
-body{
-align-items: center;
-background-color: green;
+$primary-blue: #129af2;
+$dark-blue: #0861c7;
+$navy: #12377b;
+$panel-background: #f5fbff;
+html, body{
+  align-items: center;
+  background-color: green;
   display: flex;
   justify-content: center;
+  //background-image: url("") ;
+  overflow: hidden;
+  border-radius: 5px;
 }
 .game-screen{
-  background-color: white;
-  height: 1000px;
-  width: 1000px;
+  background-color: $panel-background;
+  height: fit-content;
+  width: 120vh;
+  border-radius: 5px;
   header{
-    color: red;
+    color: $navy;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 37px;
-    background-color: burlywood;
+    background-color: $panel-background;
     .btn-back{
       height: fit-content;
       width: fit-content;
       padding: 5px 10px;
       align-self: center;
+      margin-left: 5px;
+      border-radius: 2px;
+      background-color: $primary-blue;
+      color: white;
     }
     .level-title{
       display: flex;
@@ -35,20 +47,82 @@ background-color: green;
         align-self: center;
       }
     }
+    .header-actions{
+      display: block;
+      margin: auto 0;
+      margin-right: 5px;
+      button{
+        background-color: $primary-blue;
+        color: white;
+        border-radius: 2px;
+        padding: 5px 10px;
+      }
+    }
   }
   .game-info{
-    width: 100%;
-    height: 100px;
-    background-color: yellow;
+    width: 98%;
+    height: 75px;
+    background-color: $panel-background;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap:100px;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(20, 70, 120, 0.25);
+    align-self: center;
+    margin: 4px auto;
+    border-radius: 10px;
+    div{
+      background-color: white;
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      align-content: center;
+      p{
+        margin: 0;
+      }
+    }
   }
   .game-content{
-    width: 90%;
+    width: 95%;
     height: 500px;
     background-color: blue;
     display: block;
     margin: 0 auto;
+  }
+  .game-progress{
+    width: 98%;
+    height: fit-content;
+    text-align: center;
+    align-content: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    margin: 3px auto;
+    background-color: $panel-background;
+    box-shadow: 0 8px 16px rgba(20, 70, 120, 0.25);
+    .progress-track{
+      width: 85%;
+      height: 30px;
+      margin: 0;
+    }
+  }
+  .footer-game{
+    width: 100%;
+    height: fit-content;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    .container-support{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      .btn-support{
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 }

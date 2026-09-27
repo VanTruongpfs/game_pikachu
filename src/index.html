@@ -27,19 +27,33 @@
         </header>
         <section class="game-info">
             <div>
-                <i></i>
-                <span>Thời gian</span>
+                <p>Điểm hiện tại</p>
+                <p>300</p>
             </div>
             <div>
-                <i></i>
-                <span>Số cặp</span>
+                <p>Kỉ lục cao nhất</p>
+                <p>2000</p>
             </div>
             <div>
-                <i></i>
+                <p>Số cặp</p>
+                <p>30</p>
+            </div>
+            <div>
                 <span>Huy hiệu</span>
+                <img src="" alt="">
             </div>
         </section>
+        <section class="game-progress">
+            <div class="progress-heading">
+                <label for="time-progress">
+                    Thời gian còn lại
+                </label>
 
+                <output id="time-left">02:30</output>
+            </div>
+
+            <progress id="time-progress" class="progress-track" max="150" value="150">100%</progress>
+        </section>
         <section class="game-content">
             <div class="board-wrapper">
                 <div id="game-board" class="game-board">
@@ -52,6 +66,22 @@
                 </div>
             </div>
         </section>
+        <footer class="footer-game">
+            <div class="container-support">
+                <button class="btn-support">
+                    <i class="fa-solid fa-question"></i>
+                </button>
+                <button class="btn-support">
+                    <i class="fa-solid fa-question"></i>
+                </button>
+                <button class="btn-support">
+                    <i class="fa-solid fa-question"></i>
+                </button>
+                <button class="btn-support">
+                    <i class="fa-solid fa-question"></i>
+                </button>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
