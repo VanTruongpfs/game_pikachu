@@ -36,7 +36,7 @@
             </div>
             <div>
                 <p>Số cặp</p>
-                <p>30</p>
+                <p id="numPair">30</p>
             </div>
             <div>
                 <span>Huy hiệu</span>
@@ -52,36 +52,31 @@
                 <output id="time-left">02:30</output>
             </div>
 
-            <progress id="time-progress" class="progress-track" max="150" value="150">100%</progress>
+            <progress id="time-progress" class="progress-track" max="150" value="90">60%</progress>
         </section>
         <section class="game-content">
             <div class="board-wrapper">
                 <div id="game-board" class="game-board">
-                    <button class="tile">A</button>
-                    <button class="tile">A</button>
-                    <button class="tile">B</button>
-                    <button class="tile">B</button>
-                    <button class="tile">C</button>
-                    <button class="tile">C</button>
                 </div>
             </div>
         </section>
         <footer class="footer-game">
             <div class="container-support">
-                <button class="btn-support">
-                    <i class="fa-solid fa-question"></i>
+                <button class="btn-support" id="btn-idea">
+                   <img src="assets/background/idea.jpg"/>
                 </button>
                 <button class="btn-support">
-                    <i class="fa-solid fa-question"></i>
+                    <img src="assets/background/freeze.jpg"/>
                 </button>
                 <button class="btn-support">
-                    <i class="fa-solid fa-question"></i>
+                    <img src="assets/background/exchange.jpg"/>
                 </button>
                 <button class="btn-support">
-                    <i class="fa-solid fa-question"></i>
+                    <img src="assets/background/replay.jpg"/>
                 </button>
             </div>
         </footer>
     </main>
+    <script src="js/crawImg.js"></script>
 </body>
 </html>

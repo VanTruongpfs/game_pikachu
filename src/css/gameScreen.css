@@ -3,8 +3,16 @@ html, body {
   background-color: green;
   display: flex;
   justify-content: center;
+  background-image: url("../assets/background/Pokepark-Kanto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
   border-radius: 5px;
+}
+
+html {
+  margin-top: -10px;
 }
 
 .game-screen {
@@ -12,6 +20,8 @@ html, body {
   height: fit-content;
   width: 120vh;
   border-radius: 5px;
+  padding: 0;
+  margin: 0;
 }
 .game-screen header {
   color: #12377b;
@@ -28,9 +38,10 @@ html, body {
   padding: 5px 10px;
   align-self: center;
   margin-left: 5px;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #129af2;
   color: white;
+  border: none;
 }
 .game-screen header .level-title {
   display: flex;
@@ -53,8 +64,9 @@ html, body {
 .game-screen header .header-actions button {
   background-color: #129af2;
   color: white;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 5px 10px;
+  border: none;
 }
 .game-screen .game-info {
   width: 98%;
@@ -83,10 +95,42 @@ html, body {
 }
 .game-screen .game-content {
   width: 95%;
-  height: 500px;
+  height: 480px;
   background-color: blue;
+  background-image: url("../assets/background/Pokepark-Kanto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: block;
   margin: 0 auto;
+}
+.game-screen .game-content .board-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.game-screen .game-content .board-wrapper .game-board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
+  gap: 3px;
+  overflow: hidden;
+}
+.game-screen .game-content .board-wrapper .game-board .tile {
+  align-content: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.game-screen .game-content .board-wrapper .game-board .tile img {
+  display: block;
+  align-self: center;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 .game-screen .game-progress {
   width: 98%;
@@ -98,16 +142,26 @@ html, body {
   margin: 3px auto;
   background-color: #f5fbff;
   box-shadow: 0 8px 16px rgba(20, 70, 120, 0.25);
+  appearance: none;
+  -webkit-appearance: none;
+  overflow: hidden;
 }
 .game-screen .game-progress .progress-track {
   width: 85%;
-  height: 30px;
+  height: 19px;
   margin: 0;
+  appearance: none;
+  overflow: hidden;
+  border: none;
+  border-radius: 999px;
+}
+.game-screen .game-progress .progress-track::-webkit-progress-value {
+  background: linear-gradient(90deg, #ffe01b, #79dd31, #16c96b);
 }
 .game-screen .footer-game {
   width: 100%;
   height: fit-content;
-  background-color: yellow;
+  background-color: #f5fbff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +175,14 @@ html, body {
 .game-screen .footer-game .container-support .btn-support {
   width: 50px;
   height: 50px;
+  padding: 0;
+}
+.game-screen .footer-game .container-support .btn-support img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
 }
 
 /*# sourceMappingURL=gameScreen.css.map */
