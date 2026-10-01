@@ -114,7 +114,6 @@ html{
         display: grid;
         grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
         grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
-        gap:3px;
         overflow: hidden;
         .tile{
           align-content: center;
@@ -123,6 +122,9 @@ html{
           min-height: 0;
           padding:0;
           cursor: pointer;
+          border: none;
+          border-right: 3px solid green;
+          border-bottom: 3px solid green;
           img{
             display: block;
             align-self: center;
