@@ -52,6 +52,8 @@ function renderBoard(pokemonMap) {
             const btn = document.createElement("button");
             btn.className = "tile";
             btn.dataset.id = id;
+            btn.dataset.row = i;
+            btn.dataset.col = j;
             if(id!==null){
                 const img = document.createElement("img");
                 img.src = pokemonMap.get(id);
@@ -63,6 +65,7 @@ function renderBoard(pokemonMap) {
             gameBoard.appendChild(btn);
         }
     }
+    tileClick();
 }
 
 function scaleTile(numTile, width, height) {
@@ -82,3 +85,15 @@ getImg(1).then(renderBoard).catch(console.error);
 const numPair = document.getElementById("numPair");
 numPair.innerHTML = pair;
 numPair.style.color = "red";
+
+function tileClick() {
+    document.querySelectorAll(".tile").forEach(
+        tile => {
+            tile.addEventListener("click", () =>{
+                tile.classList.toggle("selected");
+                const row = Number(tile.dataset.row);
+                const col = Number(tile.dataset.col);
+            });
+    })
+}
+
